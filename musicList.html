@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="musicList.css">
+	<script src='util.js'></script>
+	<script src='musicList.js'></script>
+</head>
+<body>
+	<a href='#' onclick='edit(true)'>create</a>
+	<table>
+		<thead></thead>
+		<tbody></tbody>
+	</table>
+	<div id='overlay'></div>
+	<div id='content'>
+		<div class='title'>
+			<h1>修 改</h1>
+			<span onclick='closeWindow()'>×</span>
+		</div>
+		<ul>
+			<li>
+				<label for="m_id">id:</label>
+				<input type="text" id='m_id'>
+			</li>
+			<li>
+				<label for="m_name">name:</label>
+				<input type="text" id="m_name">
+			</li>
+			<li>
+				<label for="m_singer">singer:</label>
+				<input type="text" id="m_singer">
+			</li>
+			<li>
+				<label for="m_type">type:</label>
+				<input type="text" id="m_type">
+			</li>
+			<li>
+				<input type="button" class="btn" value='Save' data-flag='1' onclick="save(this)" id='save'>
+				<input type="button" class="btn" value="Cancel" onclick='closeWindow()'>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
